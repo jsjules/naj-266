@@ -1,0 +1,211 @@
+https://arxiv.org/abs/2005.00547?utm_source=chatgpt.com
+
+GoEmotions: A Dataset of Fine-Grained Emotions
+Dorottya Demszky1∗ Dana Movshovitz-Attias2 Jeongwoo Ko2
+Alan Cowen2 Gaurav Nemade2 Sujith Ravi3*
+1Stanford Linguistics 2Google Research 3Amazon Alexa
+ddemszky@stanford.edu
+{danama, jko, acowen, gnemade}@google.com
+sravi@sravi.org
+
+***************************
+
+-Importance of the work:
+"Understanding emotion expressed in language has a wide range of applications, from building empathetic chatbots to detecting harmful online behavior."
+
+"These results suggest certain emotions are more verbally implicit and may require more context to be interpreted."
+
+
+-Talks about the quality of the data and presence of additional context:
+"We select subreddits with at least 10k comments and remove deleted and non-English comments."
+"Includes metadata: subreddit, author, post_id, parent_id."
+
+
+-Potential improvement:
+"Our BERT-based model achieves an average F1-score of .46 across our proposed taxonomy, leaving much room for improvement."
+
+
+
+------------------------------------
+https://arxiv.org/pdf/2304.10973
+
+
+-Difficulties in grasping emotions (labels not self annotated by author)
+"A source of error in emotion detection in social media is the way in which training labels are produced. While the target of applications is often to infer a subjective emotional state of the author of a social media post, the labels of training data are frequently produced by readers and not the authors of the post." 
+
+"For example, a comparison between reader and writer annotations shows that they disagree 25% of the time [17]." 
+
+-Vent platform allowed to self labels, unfortunately platform was shutdown on 11/11/2024
+"New platforms to share emotional experiences with other users offer the possibility to gather large-scale datasets with emotion self-annotations. Vent is an example that offers a particularly good source of self-annotated data, as the dataset available for researchers has millions of posts [19] and the design of the platform is precisely to share emotions rather than a smaller functionality as in other platforms." 
+
+
+-Limitations in self labeling
+"The last two cases suggest that the emotion tag for some of the posts is used as the main medium to express the emotion, leaving the text to add other information. This is one of the limitations of using Vent as a training dataset, as labels are part of the communication and may sometimes be complementary or otherwise to the posts." (Page 9)
+
+
+-Good performance
+
+"LEIA achieves macro-F1 values of approximately 73 on three in-domain test datasets, outperforming other supervised and unsupervised methods" (Abstract)
+
+
+https://www.sciencedirect.com/science/article/pii/S0306457324003339
+
+
+
+--------------------------------------------------------------------
+Contextualized Embedding based Approaches for
+Social Media-specific Sentiment Analysis
+Harsh Sakhrani§
+Pune Institute of Computer Technology
+Pune, India
+harshsakhrani26@gmail.com
+Saloni Parekh§
+Pune Institute of Computer Technology
+Pune, India
+saloniparekh1609@gmail.com
+Pratik Ratadiya
+vCreaTek Consulting Services Pvt. Ltd.
+Pune, India
+pratik.r@vcreatek.com
+*******************************************
+
+
+-Limitations of standard language models for social media use case
+"Social media content is restrictive in length and often contains informal grammar, abbreviations and emoticons [13], [14]. Thus, it is not suitable to use Language Models that have been pre-trained on more conventional text-corpora as far as sentiment analysis on social media goes."
+
+-suggestions for generating contextual word embeddings
+"We propose the use of BERTweet, based on [15], which is capable of generating contextual word embeddings utilizing the 'multi-head self-attention' mechanism."
+
+-suggestion to get better result, but cost sensitive
+"Experimental results show that increasing the number of tunable encoders improves performance, but not enough to compensate for the massive increase in the training cost." 
+
+"In comparison to the mean pooling technique, CNNs and Transformer Encoders prove to be better semantic feature extractors." (Page 6)
+
+"We achieve state-of-the-art results on two standard benchmark datasets, thereby also demonstrating that inclusion of a CNN or a Transformer Encoder further improves the performance when compared to a vanilla BERTweet model."
+
+
+------------------------------------------------------
+Emotion Recognition in Conversation: Research
+Challenges, Datasets, and Recent Advances
+Soujanya Poria1, Navonil Majumder2, Rada Mihalcea3, Eduard Hovy4
+School of Computer Science and Engineering, NTU, Singapore
+CIC, Instituto Politécnico Nacional, Mexico
+Computer Science & Engineering, University of Michigan, USA
+Language Technologies Institute, Carnegie Mellon University, USA
+sporia@ntu.edu.sg, navo@nlp.cic.ipn.mx,
+**********************************************
+
+-Importance of context
+"Unlike vanilla emotion recognition of sentences/utterances, ERC ideally requires context modeling of the individual utterances. This context can be attributed to the preceding utterances, and relies on the temporal sequence of utterances."
+
+"The notion of context can vary from problem to problem. For example, while calculating word representations, the surrounding words carry contextual information. Likewise, to classify a sentence in a document, other neighboring sentences are considered as its context. In Poria et al. [31], surrounding utterances are treated as context and they experimentally show that contextual evidence indeed aids in classification." 
+
+
+"Compared to the recently published works on ERC [10, 11, 12], both lexicon-based [13, 8, 14] and modern deep learning-based [4, 5] vanilla emotion recognition approaches fail to work well on ERC datasets as these works ignore the conversation specific factors such as the presence of contextual cues, the temporality in speakers' turns, or speaker-specific information." 
+
+-subjectivity in style that makes the task harder
+"Individuals have their own subtle way of expressing emotions. For instance, some individuals are more sarcastic than others. For such cases, the usage of certain words would vary depending on if they are being sarcastic." 
+
+
+
+"Due to emotional inertia, participants in a conversation tend to stick a particular emotional state, unless some external stimuli, usually the other participants, invoke a change." 
+
+
+"All these networks, namely CMN, ICON, IANN and DialogueRNN, perform poorly on the utterances with emotion shift. In particular, the cases where the emotion of the target utterance differs from the previous utterance, DialogueRNN could only correctly predict 47.5% instances." 
+
+---------------------------------
+
+Performance evaluation of Reddit Comments using
+Machine Learning and Natural Language Processing
+methods in Sentiment Analysis
+Xiaoxia Zhang1[0009-0007-5698-4677]
+, Xiuyuan Qi2[0009-0005-9536-0870] and Zixin Teng3[0009-0009-
+2699-6743]
+Shanghaitech University, Shanghai, China
+1 zhangxx5@shanghaitech.edu.cn
+2 qixy1@shanghaitech.edu.cn
+3 tengzx@shanghaitech.edu.cn
+**********************************
+
+"However, the efficacy of sentiment analysis models is hindered by the lack of expansive and fine-grained emotion datasets." 
+
+
+
+
+"The binary taxonomy oversimplifies emotional nuances by categorizing sentiments solely into positive and negative types, thus lacking precision and accuracy."
+
+
+"The delineation of emotions into six categories fails to adequately address the intricate nature of contemporary emotion classification tasks, particularly within the dynamic landscape of social media where a vast array of emotions is expressed, often defying easy categorization." 
+
+
+"Besides, the Reddit platform has hitherto not garnered significant attention from researchers in the field of sentiment recognition and prediction." 
+
+
+"Comprising 58,000 Reddit platform comments meticulously annotated to encompass 27 emotion categories or 'neutral' sentiments, GoEmotions caters to the diverse array of information typified by Reddit as a comprehensive, large-scale social news forum." 
+
+
+"Our findings reveal that the RoBERTa model consistently outperforms the baseline models, demonstrating superior accuracy in fine-grained sentiment classification tasks." 
+
+
+"It is evident that non-unique emotion IDs are more congruent with the authentic linguistic contexts encountered in daily life. This, in turn, imposes heightened classification requirements on the model's capabilities." 
+
+
+
+---------------
+Advancing emotion recognition in social media: A novel integration
+of heterogeneous neural networks with fine-tuned language models
+Abbas Maazallahi a,
+∗
+, Masoud Asadpoura
+, Parisa Bazmi b
+a School of Electrical and Computer Engineering, University College of Engineering, University of Tehran, North Karg
+
+
+*******************************
+
+
+"Social media platforms have emerged as crucial sources for emotion analysis, but the issue of non-compliance in labeling by fine-tuned large language models (LLMs) can significantly impact the accuracy of emotion classification."
+
+"The primary challenge in emotion classification from social media text lies in handling non-compliance labels between different fine-tuned large language models (LLMs). These non-compliant labels result in substantial inconsistencies in classification, leading to reduced accuracy."
+
+"Existing solutions in emotion classification using fine-tuned language models often overlook the issue of non-compliance, where multiple models produce conflicting labels for the same input text."
+
+
+
+"The GoEmotions dataset (Demszky et al., 2020), developed by Google Research, is one of the most comprehensive emotion-labeled resources for English text. It consists of over 58,000 Reddit comments annotated for 27 distinct emotions and a neutral category."
+
+
+"The annotation process involved human raters who categorized each comment according to a predefined set of emotions, ensuring high inter-rater reliability."
+
+"For each phrase 𝑥, suppose it appears in 𝑛 tweets, out of which 𝑚 tweets have agreed labels. We adopt a two-pronged approach: If none of the 𝑛 tweets corresponding to phrase 𝑥 have agreed labels, we assign a zero vector to the phrase's feature space."
+
+
+
+"This study addresses this challenge by introducing a novel compliance-driven training set that systematically harmonizes label discrepancies across multiple LLMs, thereby enhancing classification accuracy by over 5% on the non-compliance set."
+
+"Based on 3, it becomes evident that employing attention-based aggregation results in significantly more accurate label assignments... the F1 score improves from approximately 45% to 56% on the test dataset."
+
+"For the GoEmotions dataset, the HGNNN-Min model achieves the highest overall accuracy (0.758) and F1-score (0.677)."
+
+
+"In the classification phase, the method aims for robustness, especially when ample metadata or contextual information is lacking on social media platforms."
+
+"This approach enriches the heterogeneous network with intrinsic information encapsulated in these models. Consequently, our method becomes largely self-contained, not requiring external features such as user details or additional context, yet still achieving commendable prediction accuracy."
+
+"Despite the advancements in emotion recognition through fine-tuned language models, several challenges remain. One prominent issue is the non-compliance in emotion labeling, where different LLMs produce conflicting labels, leading to reduced classification accuracy and model instability."
+
+"This challenge is particularly pronounced when dealing with informal and context-dependent language on social media platforms."
+
+"The proposed framework offers a versatile and scalable solution applicable across various languages and platforms, ensuring broad utility in advanced emotion classification tasks."
+
+"Practically, the proposed framework provides a robust solution for real-world applications where label inconsistencies and ambiguous annotations are prevalent, such as social media platforms."
+
+"Future work could integrate multimodal data sources, such as images or videos, to provide richer contextual information and improve emotion recognition performance."
+
+"Moreover, integrating multimodal data sources (such as image and video analysis) could provide richer contextual information, improving the robustness of emotion recognition systems."
+
+"The compliance-driven training set not only enhances performance on challenging datasets but also reduces overfitting and improves model generalization on unseen data. This adaptability across different datasets and platforms establishes a new benchmark for emotion classification."
+
+
+-------------
+

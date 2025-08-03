@@ -40,14 +40,14 @@ Filtered by rater agreement (>=2), we use the following splits:
 
 ## Project Components
 
-### 🔍 Data Analysis Scripts
+### Data Analysis Scripts
 
 - `analyze_data.py`: Computes label distributions, correlations, hierarchical clustering.
 - `extract_words.py`: Computes top words for each emotion using log-odds ratio analysis.
 - `replace_labels.py`: Maps fine-grained labels into coarse-grained categories (e.g., Ekman).
 - `evaluate_predictions.py`: Evaluates classifier predictions against ground truth using accuracy, precision, recall, and F1 (macro, micro, weighted).
 
-### 📊 Visualizations
+### Visualizations
 
 We include support for:
 
@@ -56,10 +56,33 @@ We include support for:
 - Sentiment-colored clustermaps
 - Top word bar plots by emotion
 
-### 🧠 Modeling
+### Modeling
 
-- `bert_classifier.py` fine-tunes BERT-base (cased) on GoEmotions using multi-label classification.
-- Support for label remapping and hierarchical loss (optional)
+This project explores multiple transformer-based emotion classification models trained on the GoEmotions dataset, using both text-only and context-augmented variants.
+
+#### **Model Scripts**
+
+* `bert_classifier.py`: Fine-tunes **BERT-base (cased)** for **multi-label classification** on GoEmotions.
+
+  * Supports optional **label remapping** and **hierarchical loss**.
+* `roberta_classifier.py`: Fine-tunes **RoBERTa-base** for **multi-class classification** using cross-entropy loss.
+
+  * Supports token prepending for contextual metadata (e.g., `[SUBREDDIT:]`, `[AUTHOR:]`) and dynamic embedding resizing.
+  * Integrated with Hugging Face’s `Trainer` API and macro F1 as the main evaluation metric.
+
+#### **Modeling Notebooks**
+
+* `01_baseline_text_model.ipynb`: Trains the **baseline RoBERTa model** on comment text only (no context).
+* `text_model_with_no_context_RoBERTa_cleaned_data.ipynb`: RoBERTa trained on **cleaned data** without any context.
+* `text_model_with_subreddit_context_RoBERTa_cleaned_data.ipynb`: RoBERTa trained with **subreddit prepended**.
+* `text_model_with_author_context_RoBERTa_cleaned_data.ipynb`: RoBERTa trained with **author identity prepended**.
+* `text_model_with_subreddit_and_author_context_RoBERTa_cleaned_data.ipynb`: RoBERTa trained with **combined subreddit and author context**.
+* `bert_multi_label_text_classification.ipynb`: Fine-tunes **multi-label BERT** using the raw or remapped emotion labels.
+* `deberta_model_raw_data.ipynb`: DeBERTa trained on the **raw GoEmotions dataset** (unfiltered).
+* `deberta_clean_data.ipynb`: DeBERTa trained on the **cleaned dataset** without context.
+* `cos_deberta_context.ipynb`: DeBERTa trained on cleaned data with **author + subreddit context**.
+* `text_model_with_subreddit_and_author_context_deBERTa_cleaned_data.ipynb`: Final **DeBERTa context-aware model**, also used to generate plots.
+
 
 ## Ekman Label Mapping
 
